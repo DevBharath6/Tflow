@@ -1,0 +1,174 @@
+:root {
+  --primary: #1976d2;
+  --primary-dark: #0d47a1;
+  --bg-light: #f9fafc;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg-light);
+}
+
+/* ===== PROFILE ===== */
+.profile {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 2rem;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.profile-header h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.profile-header p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.stage-badge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  text-transform: capitalize;
+}
+
+/* ===== NOTES & TIMELINE ===== */
+.notes-timeline {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .notes-timeline {
+    flex-direction: column;
+  }
+}
+
+/* ===== CARDS ===== */
+.card {
+  flex: 1 1 45%;
+  background: #fefefe;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* ===== TEXTAREA & BUTTON ===== */
+textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  resize: vertical;
+  font-family: inherit;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+button {
+  padding: 0.6rem 1.2rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: 0.2s;
+}
+button:hover {
+  background: var(--primary-dark);
+}
+
+/* ===== LISTS ===== */
+.notes-list,
+.timeline-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  padding-right: 0.25rem;
+}
+.note-item,
+.timeline-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+.note-item small,
+.timeline-item small,
+.timeline-note {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+.timeline-note {
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.mention {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ===== SCROLLBAR ===== */
+.notes-list::-webkit-scrollbar,
+.timeline-list::-webkit-scrollbar {
+  width: 6px;
+}
+.notes-list::-webkit-scrollbar-thumb,
+.timeline-list::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+.notes-list::-webkit-scrollbar-thumb:hover,
+.timeline-list::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}

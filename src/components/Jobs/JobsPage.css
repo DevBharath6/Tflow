@@ -1,0 +1,176 @@
+/* JobsPage.css */
+
+/* Wrapper */
+.jobs-page-wrapper {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+/* Header bar */
+.jobs-header {
+  background-color: #0d6efd;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 1rem;
+}
+
+/* Add Job button */
+.jobs-add-btn {
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+
+.jobs-add-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Filter buttons */
+.jobs-filter-btn {
+  padding: 0.45rem 0.85rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+  background: transparent;
+}
+
+.jobs-filter-btn:hover {
+  background-color: #e7f1ff !important;
+}
+
+/* Job card */
+.jobs-card {
+  border-radius: 12px;
+  cursor: grab;
+  overflow: hidden;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.jobs-card.dragging {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  transform: scale(1.02);
+}
+
+/* Job title */
+.jobs-card-title {
+  color: #0d6efd;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Job info (ID + Slug) */
+.jobs-card-body-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.jobs-card-body-info small {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.jobs-card-body-info small span {
+  font-weight: 600;
+  color: #343a40;
+}
+
+/* Job status */
+.jobs-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.jobs-status.active {
+  background-color: #198754; /* green for active */
+  color: #fff;
+}
+
+.jobs-status.archived {
+  background-color: #6c757d; /* grey for archived */
+  color: #fff;
+}
+
+/* Tags */
+.jobs-tag {
+  font-size: 0.7rem;
+  padding: 0.35em 0.6em;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+/* Card buttons grid */
+.jobs-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.jobs-actions .btn {
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  padding: 0.45rem 0.6rem;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.jobs-actions .btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Optional: different button colors for archive/activate */
+.jobs-actions .btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.jobs-actions .btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.jobs-actions .btn-outline-success {
+  border-color: #198754;
+  color: #198754;
+}
+
+.jobs-actions .btn-outline-success:hover {
+  background-color: #198754;
+  color: #fff;
+}
+
+/* Builder & Run buttons */
+.jobs-actions .btn-outline-info {
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+}
+
+.jobs-actions .btn-outline-info:hover {
+  background-color: #0dcaf0;
+  color: #fff;
+}
+
+.jobs-actions .btn-outline-primary {
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+
+.jobs-actions .btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
